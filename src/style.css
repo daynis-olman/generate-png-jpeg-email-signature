@@ -1,0 +1,178 @@
+body {
+    font-family: "Nunito", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1 {
+    color: rgb(39, 35, 35);
+    font-size: 26px;
+    font-weight: 500;
+    display: inline;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h2,
+h3,
+p {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+table,
+tr,
+td {
+    border: 0px solid #bbb9b9;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: -20px;
+}
+
+form {
+    font-size: 16px;
+}
+
+footer {
+    font-size: 14px;
+    border-top: 1px solid #cacaca;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.right-menu {
+    text-align: right;
+    line-height: 35px;
+}
+.right-menu a {
+    text-decoration: none;
+}
+.right-menu a:hover {
+    text-decoration: overline;
+    font-weight: 900;
+}
+#language {
+    text-align: right;
+    font-size: 14px;
+}
+
+#language .active {
+    color: #5a5757;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: default;
+}
+
+#language .active:hover {
+    text-decoration: none;
+}
+
+#nav-bar {
+    text-align: right;
+}
+
+.app-wrapper {
+    margin-top: 30px;
+}
+
+.main-logo {
+    width: 110px;
+    display: inline;
+    margin-right: 10px;
+}
+
+.input-group {
+    width: 400px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #84ab79;
+    border-color: #84ab79;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #648a5a;
+    border-color: #84ab79;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+a.social-media img {
+    margin: 0;
+    background-color: #8fadc9;
+    max-width: 135px;
+    display: inline;
+    height: 24px;
+}
+
+a.social-media {
+    color: #8fadc9;
+    font-size: 24px;
+    margin: 0px;
+}
+
+.contact-icon {
+    background-color: #84ac7a;
+    color: #84ab79;
+    font-size: 13px;
+    margin-right: 5px;
+    width: 13px;
+}
+
+.contact li {
+    color: #000000;
+    font-size: 12px;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.contact li a {
+    color: #000000;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: lowercase;
+    padding: 0;
+    margin: 0;
+}
+
+.required {
+    color: red;
+}
+
+.instruction {
+    line-height: 1;
+    padding: 10px;
+    font-size: 17px;
+    color: #5a5757;
+    font-weight: bold;
+    background: #f0f0f5;
+}
+
+.copyright {
+    text-align: left;
+}
+
+.bestView {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
