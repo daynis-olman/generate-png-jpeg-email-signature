@@ -1,5 +1,7 @@
 <?php
 
+#var_dump($_POST);
+#die();
 //Set the Content Type
 header('Content-type: image/jpeg');
 
@@ -12,15 +14,23 @@ $black = imagecolorallocate($jpg_image, 0, 0, 0);
 // Set Path to Font File
 $font_path = 'fonts/Helvetica.ttf';
 
+//Pre-process form content
+//if (isset($_POST['lastName-input'])) {
+//    $fullname = $_POST['lovers'];
+//}else{
+//    $lovers = "P & M";
+//}
+
+
 // Set Text to Be Printed On Image
-$fullname = "Daynis Olman";
-$jobtitle = "Infrastructure Support";
+$fullname = $_POST["firstName-input"] . " " . $_POST["lastName-input"];
+$jobtitle = $_POST["jobTitle-input"];
 $website = "www.naturalwayofliving.com";
-$email = "daynis" . "@naturalwayofliving.com";
-$department = "IT"." | ";
+$email = $_POST["emailAddress-input"] . "@naturalwayofliving.com";
+$department = $_POST["department-input"]." | ";
 $organisation = "$department" ."Natural Way Of Living";
-$officephone = " | " . "1800999234";
-$mobilephone = "0490828173";
+$officephone = " | " . $_POST["officePhone-input"];;
+$mobilephone = $_POST["mobilePhone-input"];;
 $phonenumbers = $mobilephone . $officephone;
 
 // Print Name on Image

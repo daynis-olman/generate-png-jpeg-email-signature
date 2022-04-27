@@ -9,7 +9,6 @@
       name="description"
       content="Natural Way of Living Email Signature Generator"
           />
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <title>NWL - Email Signature Generator</title>
     <!-- CSS only -->
     <link
@@ -23,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
       rel="stylesheet"
           />
+      <script src="src/vanilla-validator.concat.min.js"></script>
     <script
       src="https://kit.fontawesome.com/eb42c3a17f.js"
       crossorigin="anonymous"
@@ -81,7 +81,7 @@
                     <div class="col-sm">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control required"
                         id="firstName-input"
                         name="firstName-input"
                         aria-label="First name"
@@ -188,6 +188,7 @@
     Download email signature
                     </button>
                   </div>
+                    <input type='submit'>
                 </form>
               </div>
             </div>
@@ -263,5 +264,5 @@
       </div>
     </div>
   </body>
-  <script src="src/index.js"></script>
+<script>var validator = new VanillaValidator({});</script>
 </html>'
