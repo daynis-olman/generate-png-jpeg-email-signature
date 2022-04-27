@@ -1,6 +1,6 @@
-# Generate email signature jpeg images with personal data from HTML form submission
-Simple PHP APP that generates downloadable JPEG email signatures (images) 
-with personal data from HTML Webform submission
+# Generates JPEG email signatures from HTML form submission
+Simple PHP APP that generates downloadable JPEG email signatures (images).
+Images will have embedded personal data from HTML Webform submissions
 
 # How it works:
 
