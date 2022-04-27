@@ -4,7 +4,7 @@ Images will have embedded personal data from HTML Webform submissions
 
 # How it works:
 
-- Step 1: User completes HTML webform `index.html` (Name, Email, Department, Phone)
+- Step 1: User completes HTML form `index.html` (Name, Email, Role, Phone)
 - Step 2: User clicks "Download Email Signature"
 - Step 3: Webform submits form data via POST to `generate-signature.php`
 - Step 4: PHP file will write user submitted data onto a blank image with company logo
