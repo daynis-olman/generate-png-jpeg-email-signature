@@ -6,7 +6,7 @@ with personal data from HTML Webform submission
 
 - Step 1: User completes HTML webform `index.html` (Name, Email, Department, Phone)
 - Step 2: User clicks "Download Email Signature"
-- Step 3: Webform submits form data via POST to generate-signature.php
+- Step 3: Webform submits form data via POST to `generate-signature.php`
 - Step 4: PHP file will write user submitted data onto a blank image with company logo
 - Step 5: Email signature `.jpeg` inside a .ZIP archive will be downloaded
 
