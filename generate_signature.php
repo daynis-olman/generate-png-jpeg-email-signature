@@ -14,24 +14,26 @@ $black = imagecolorallocate($jpg_image, 0, 0, 0);
 // Set Path to Font File
 $font_path = 'fonts/Helvetica.ttf';
 
-//Pre-process form content
-//if (isset($_POST['lastName-input'])) {
-//    $fullname = $_POST['lovers'];
-//}else{
-//    $lovers = "P & M";
-//}
-
-
 // Set Text to Be Printed On Image
 $fullname = $_POST["firstName-input"] . " " . $_POST["lastName-input"];
 $jobtitle = $_POST["jobTitle-input"];
 $website = "www.naturalwayofliving.com";
 $email = $_POST["emailAddress-input"] . "@naturalwayofliving.com";
-$department = $_POST["department-input"]." | ";
-$organisation = "$department" ."Natural Way Of Living";
-$officephone = " | " . $_POST["officePhone-input"];;
-$mobilephone = $_POST["mobilePhone-input"];;
-$phonenumbers = $mobilephone . $officephone;
+$mobilephone = $_POST["mobilePhone-input"];
+
+//Pre-process data before printing to image
+if (strlen(trim($_POST['officePhone-input'])) > 0)  {
+    $officephone = $_POST["officePhone-input"];
+    $phonenumbers = $mobilephone . " | " .  $officephone;
+}else{
+    $phonenumbers = $mobilephone;
+}
+if (strlen(trim($_POST['department-input'])) > 0) {
+    $department = $_POST["department-input"]." | ";
+    $organisation = "$department" ."Natural Way Of Living";
+}else{
+    $organisation = "Natural Way Of Living";
+}
 
 // Print Name on Image
 imagettftext($jpg_image, 15, 0, 202, 40, $black, $font_path, $fullname);
