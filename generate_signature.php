@@ -16,6 +16,7 @@ $font_path = 'fonts/Helvetica.ttf';
 
 // Set Text to Be Printed On Image
 $fullname = $_POST["firstName-input"] . " " . $_POST["lastName-input"];
+$firstname = $_POST["firstName-input"];
 $jobtitle = $_POST["jobTitle-input"];
 $website = "www.naturalwayofliving.com";
 $email = $_POST["emailAddress-input"] . "@naturalwayofliving.com";
@@ -53,8 +54,28 @@ imagettftext($jpg_image, 10, 0, 227, 175, $black, $font_path, $email);
 // Print Company Website on Image
 imagettftext($jpg_image, 10, 0, 227, 199, $black, $font_path, $website);
 
+// Save image in temporary directory
+$signatureFilename = "nwl-email-signature.jpg";
+imagejpeg($jpg_image, "tmp/" . $signatureFilename);
+
+// Save generated image email signature as .ZIP and Download
+$zip = new ZipArchive;
+$tmp_file = "tmp/email-signature.zip";
+if ($zip->open($tmp_file,  ZipArchive::CREATE)) {
+    $zip->addFile("tmp/".$signatureFilename, $signatureFilename);
+    $zip->close();
+    echo 'Archive created!';
+    header("Content-disposition: attachment; filename=$firstname.email-signature.zip");
+    header('Content-type: application/zip');
+    ob_clean();
+    flush();
+    readfile($tmp_file);
+} else {
+    echo 'Failed!';
+}
+
 // Send Image to Browser
-imagejpeg($jpg_image);
+#imagejpeg($jpg_image);
 
 // Clear Memory
 imagedestroy($jpg_image);
