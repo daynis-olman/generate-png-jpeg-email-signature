@@ -45,23 +45,11 @@
           </div>
           <div id="nav-bar">
             <a
-              href="https://exchange.naturalwayofliving.com/"
+              href="https://exchange.naturalwayofliving.com:2096/"
               target="_blank"
               rel="noopener noreferrer"
-                  >Login to Zimbra</a
->&nbsp;|&nbsp;
-            <a
-              href="./files/Tutorial to setup new Email ver 5.5.pdf"
-              target="_blank"
-                  >Tutorial</a
->&nbsp;|&nbsp;
-            <a
-              href="https://youtu.be/H4zSvt6z-so"
-              target="_blank"
-              rel="noopener noreferrer"
-                  >Video Tutorial
-</a>
-            &nbsp;|&nbsp;
+                  >Login to Email</a
+>&nbsp;
             <!-- Calendly link widget begin -->
             <link
               href="https://assets.calendly.com/assets/external/widget.css"
@@ -85,7 +73,7 @@
           <div class="col">
             <div class="card border-0">
               <div class="card-body">
-                <form class="signature">
+                <form action="generate_signature.php" class="signature" method="post">
                   <div class="row mb-2">
                     <label for="firstName" class="col-sm col-form-label"
 >First Name<sup class="required">*(required)</sup></label
@@ -95,6 +83,7 @@
                         type="text"
                         class="form-control"
                         id="firstName-input"
+                        name="firstName-input"
                         aria-label="First name"
                             />
                     </div>
@@ -108,6 +97,7 @@
                         type="text"
                         class="form-control"
                         id="lastName-input"
+                        name="lastName-input"
                         aria-label="Last name"
                             />
                     </div>
@@ -121,20 +111,8 @@
                         type="text"
                         class="form-control"
                         id="jobTitle-input"
+                        name="jobTitle-input"
                         aria-label="Job Title"
-                            />
-                    </div>
-                  </div>
-                  <div class="row mb-1">
-                    <label for="customField" class="col-sm col-form-label"
->Custom Field</label
->
-                    <div class="col-sm">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="customField-input"
-                        aria-label="Custom Field"
                             />
                     </div>
                   </div>
@@ -147,6 +125,7 @@
                         type="text"
                         class="form-control"
                         id="department-input"
+                        name="department-input"
                         aria-label="Department"
                             />
                     </div>
@@ -163,6 +142,7 @@
                         type="tel"
                         class="form-control"
                         id="officePhone-input"
+                        name="officePhone-input"
                         aria-label="Office Phone"
                             />
                     </div>
@@ -178,6 +158,7 @@
                         type="tel"
                         class="form-control"
                         id="mobilePhone-input"
+                        name="mobilePhone-input"
                         aria-label="Mobile Phone"
                             />
                     </div>
@@ -193,6 +174,7 @@
                           type="text"
                           class="form-control col-sm-1"
                           id="emailAddress-input"
+                          name="emailAddress-input"
                           aria-label="Email Address"
                               />
                         <span class="input-group-text col-sm" id="basic-addon1"
@@ -203,7 +185,7 @@
                   </div>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-success" id="submit">
-    Submit
+    Download email signature
                     </button>
                   </div>
                 </form>
