@@ -1,7 +1,7 @@
 # Generates JPEG email signatures from HTML form submission
 - Simple PHP APP that generates downloadable JPEG email signature images 
 - App first retrieves a placeholder `baseline-image.jpg` containing only the company logo
-- App will then write pre-processed webform data to image to create an individual email signature
+- App will then write pre-processed webform data to placeholder image to create an individual email signature
 - Final signature image will be downloaded as `signature.zip` 
 
 <img src="images/application-diagram-2.png?raw=true" width="756" height="209">
