@@ -4,13 +4,13 @@
 header('Content-type: image/jpeg');
 
 // Create Image From Existing File
-$jpg_image = imagecreatefromjpeg('images/baseline_image.jpg');
+$jpg_image = imagecreatefromjpeg('../images/baseline_image.jpg');
 
 // Allocate A Color For The Text
 $black = imagecolorallocate($jpg_image, 0, 0, 0);
 
 // Set Path to Font File
-$font_path = 'fonts/Helvetica.ttf';
+$font_path = '../fonts/Helvetica.ttf';
 
 // Set Text to Be Printed On Image
 $fullname = $_POST["firstName-input"] . " " . $_POST["lastName-input"];
@@ -54,13 +54,13 @@ imagettftext($jpg_image, 10, 0, 227, 199, $black, $font_path, $website);
 
 // Save image in temporary directory
 $signatureFilename = "nwl-email-signature.jpg";
-imagejpeg($jpg_image, "tmp/" . $signatureFilename);
+imagejpeg($jpg_image, "../tmp/" . $signatureFilename);
 
 // Save generated image email signature as .ZIP and Download
 $zip = new ZipArchive;
-$tmp_file = "tmp/email-signature.zip";
+$tmp_file = "../tmp/email-signature-jpeg.zip";
 if ($zip->open($tmp_file,  ZipArchive::CREATE)) {
-    $zip->addFile("tmp/".$signatureFilename, $signatureFilename);
+    $zip->addFile("../tmp/".$signatureFilename, $signatureFilename);
     $zip->close();
     echo 'Archive created!';
     header("Content-disposition: attachment; filename=$firstname.email-signature.zip");
