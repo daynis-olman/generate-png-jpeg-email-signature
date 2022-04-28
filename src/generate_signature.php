@@ -1,7 +1,5 @@
 <?php
 
-#var_dump($_POST);
-#die();
 //Set the Content Type
 header('Content-type: image/jpeg');
 
