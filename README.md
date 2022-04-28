@@ -2,7 +2,7 @@
 Simple PHP APP that generates downloadable JPEG email signatures (images).
 Images will have embedded personal data from HTML Webform submissions
 
-![application-diagram](images/application-diagram.png?raw=true)
+<img src="images/application-diagram.png?raw=true" width="570" height="420">
 
 # How it works:
 
