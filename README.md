@@ -32,8 +32,9 @@
 
 - Step 1: Open template source file `baseline_image.psd` with photoshop or other app
 - Step 2: Make modifications as required
-- Step 3: Generate new email signature from template and save it as `images/baseline_image.jpg`
-- Step 4: Try generating a new email signature
-- Step 5: Calibration can be adjusted by changing `angle`, `x`, `y` parameters in `imagettftext`   
+- Step 3: Generate new baseline template images from `.PSD` Source
+- Step 4: Save above images as `images/baseline_image.jpg` or `images/baseline_image.png`
+- Step 4: Try running the app and generating a new email signature
+- Step 5: Text Calibration can be adjusted by changing `angle`, `x`, `y` in `imagettftext`   
 
 Application does not require build or compile and will work on any server with PHP. Application has no dependencies and is written in procedural PHP
