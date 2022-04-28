@@ -9,7 +9,7 @@
 # Live demo
 [Live application demo](https://emailsignature.naturalwayofliving.com/)
 
-# Application diagram + mroe details:
+# Application diagram + more details
 <img src="images/application-diagram.png?raw=true" width="650" height="200">
 
 - Step 1: User completes HTML form `index.html` (Name, Email, Role, Phone)
