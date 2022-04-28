@@ -2,7 +2,7 @@
 Simple PHP APP that generates downloadable JPEG email signatures (images).
 Images will have embedded personal data from HTML Webform submissions
 
-<img src="images/application-diagram2.png?raw=true" width="800" height="425">
+<img src="images/application-diagram-2.png?raw=true" width="800" height="425">
 
 # Live demo
 [Live application demo](https://emailsignature.naturalwayofliving.com/)
