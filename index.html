@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,7 @@
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
             rel="stylesheet"
     />
-    <script src="src/vanilla-validator.concat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
             src="https://kit.fontawesome.com/eb42c3a17f.js"
             crossorigin="anonymous"
@@ -74,7 +74,7 @@
                     <div class="card-body">
                         <form action="src/generate_png_email_signature.php" class="signature" method="post">
                             <div class="row mb-2">
-                                <label for="firstName" class="col-sm col-form-label"
+                                <label for="firstName" id="input-firstname" class="col-sm col-form-label"
                                 >First Name<sup class="required">*(required)</sup></label
                                 >
                                 <div class="col-sm">
@@ -185,40 +185,11 @@
                                 </div>
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button type="submit" class="btn btn-success" id="submit">
+                                <button type="submit" class="btn btn-success" id="submit-btn" disabled>
                                     Download email signature
                                 </button>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Right Column -->
-            <div class="col">
-                <div class="card invisible" id="card">
-                    <div class="card-body border rounded">
-                        <div class="row">
-                            <!--left column -->
-                            <div class="col">
-                                <div id="signatureGenerated"></div>
-                                <br />
-                                <div id="copySignature2" class="invisible">
-                                    <div
-                                            class="d-grid gap-2 d-md-flex justify-content-md-end"
-                                    >
-                                        <span class="instruction">Click this button ---></span>
-                                        <button
-                                                type="submit"
-                                                class="btn btn-success"
-                                                id="copyToClipboard2"
-                                                ;
-                                        >
-                                            Copy Signature
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -231,4 +202,14 @@
         </div>
     </div>
 </body>
+<script>
+    $(document).ready(function(){
+        $('input[type="text"]').change(function(){
+            $("#submit-btn").prop( "disabled", true );
+            if($("#firstName-input").val().length > 0 && $("#jobTitle-input").val().length > 0) {
+                $('#submit-btn').removeAttr('disabled');
+            }
+        });
+    });
+</script>
 </html>
