@@ -4,6 +4,12 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.goog-te-banner-frame {
+    display: none;
+    height: 0 !important;
+    visibility: hidden
+}
+
 h1 {
     color: rgb(39, 35, 35);
     font-size: 26px;

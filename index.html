@@ -22,6 +22,7 @@
             rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script
             src="https://kit.fontawesome.com/eb42c3a17f.js"
             crossorigin="anonymous"
@@ -39,8 +40,7 @@
         <h1>NWL Email Signature Generator</h1>
         <div class="right-menu">
             <div id="language">
-                <a href="/" id="bahasaIndonesia">Bahasa Indonesia</a>
-                | <a href="/" id="english" class="active">English</a>
+                <div id='google_translate_element'></div>
             </div>
             <div id="nav-bar">
                 <a
@@ -211,5 +211,53 @@
             }
         });
     });
+</script>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ includedLanguages: 'en,id', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+    }
+
+    function triggerHtmlEvent(element, eventName) {
+        var event;
+        if (document.createEvent) {
+            event = document.createEvent('HTMLEvents');
+            event.initEvent(eventName, true, true);
+            element.dispatchEvent(event);
+        } else {
+            event = document.createEventObject();
+            event.eventType = eventName;
+            element.fireEvent('on' + event.eventType, event);
+        }
+    }
+    $(document).ready(function () {
+        $(document).on('click', '.languageOption', function () {
+            var value = $(this).attr("data-lang");
+
+            updateLanguage(value);
+
+        })
+
+        function updateLanguage(value) {
+            var selectIndex = 0;
+            var a = document.querySelector("#google_translate_element select");
+            switch (value) {
+                case "en":
+                    selectIndex = 0;
+                    break;
+                case "es":
+                    selectIndex = 3;
+                    break;
+                case "fr":
+                    selectIndex = 1;
+                    break;
+                case "pt":
+                    selectIndex = 2;
+                    break;
+
+            }
+            a.selectedIndex = selectIndex;
+            a.dispatchEvent(new Event('change'));
+        }
+    })
 </script>
 </html>
