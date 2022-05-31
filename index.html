@@ -1,215 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-            name="description"
-            content="Natural Way of Living Email Signature Generator"
-    />
+<head><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta
+        name="description"
+        content="Natural Way of Living Email Signature Generator"
+/>
     <title>NWL - Email Signature Generator</title>
     <!-- CSS only -->
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-            crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
-            rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&amp;display=swap" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><script
             src="https://kit.fontawesome.com/eb42c3a17f.js"
             crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/src/style.css" />
+    <link href="/src/style.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
-    <div class="app-wrapper">
-        <img
-                src="./images/nwl_circle_green.png"
-                alt="Logo Natural Way of Living"
-                class="main-logo"
-        />
+    <div class="app-wrapper"><img alt="Logo Natural Way of Living" class="main-logo" src="./images/nwl_circle_green.png" />
         <h1>NWL Email Signature Generator</h1>
+
         <div class="right-menu">
             <div id="language">
-                <a href="/" id="bahasaIndonesia">Bahasa Indonesia</a>
-                | <a href="/" id="english" class="active">English</a>
+                <div id="google_translate_element"></div>
             </div>
-            <div id="nav-bar">
-                <a
-                        href="https://exchange.naturalwayofliving.com:2096/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >Login to Email</a
-                >&nbsp;
-                <!-- Calendly link widget begin -->
-                <link
-                        href="https://assets.calendly.com/assets/external/widget.css"
-                        rel="stylesheet"
-                />
-                <script
-                        src="https://assets.calendly.com/assets/external/widget.js"
-                        type="text/javascript"
-                ></script>
-                <a
-                        href=""
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irfani-silviana/nwl-email-support'});return false;"
-                >Schedule time for Live Support</a
-                >
-                <!-- Calendly link widget end -->
-            </div>
+
+            <div id="nav-bar"><a href="https://exchange.naturalwayofliving.com:2096/" rel="noopener noreferrer" target="_blank">Login to email system</a></div>
         </div>
+
         <hr />
-        <div class="row">
-            <!-- Left Column -->
+        <div class="row"><!-- Left Column -->
             <div class="col">
                 <div class="card border-0">
                     <div class="card-body">
                         <form action="src/generate_png_email_signature.php" class="signature" method="post">
-                            <div class="row mb-2">
-                                <label for="firstName" id="input-firstname" class="col-sm col-form-label"
-                                >First Name<sup class="required">*(required)</sup></label
-                                >
-                                <div class="col-sm">
-                                    <input
-                                            type="text"
-                                            class="form-control required"
-                                            id="firstName-input"
-                                            name="firstName-input"
-                                            aria-label="First name"
-                                    />
-                                </div>
+                            <div class="row mb-2"><label class="col-sm col-form-label" for="firstName" id="input-firstname">First Name<sup class="required">*(required)</sup></label>
+
+                                <div class="col-sm"><input aria-label="First name" class="form-control required" id="firstName-input" name="firstName-input" type="text" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="lastName" class="col-sm col-form-label"
-                                >Last Name</label
-                                >
-                                <div class="col-sm">
-                                    <input
-                                            type="text"
-                                            class="form-control"
-                                            id="lastName-input"
-                                            name="lastName-input"
-                                            aria-label="Last name"
-                                    />
-                                </div>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="lastName">Last Name</label>
+
+                                <div class="col-sm"><input aria-label="Last name" class="form-control" id="lastName-input" name="lastName-input" type="text" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="jobTitle" class="col-sm col-form-label"
-                                >Job Title<sup class="required">*(required)</sup></label
-                                >
-                                <div class="col-sm">
-                                    <input
-                                            type="text"
-                                            class="form-control"
-                                            id="jobTitle-input"
-                                            name="jobTitle-input"
-                                            aria-label="Job Title"
-                                    />
-                                </div>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="jobTitle">Job Title<sup class="required">*(required)</sup></label>
+
+                                <div class="col-sm"><input aria-label="Job Title" class="form-control" id="jobTitle-input" name="jobTitle-input" type="text" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="department" class="col-sm col-form-label"
-                                >Department</label
-                                >
-                                <div class="col-sm">
-                                    <input
-                                            type="text"
-                                            class="form-control"
-                                            id="department-input"
-                                            name="department-input"
-                                            aria-label="Department"
-                                    />
-                                </div>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="department">Department</label>
+
+                                <div class="col-sm"><input aria-label="Department" class="form-control" id="department-input" name="department-input" type="text" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="officePhone" class="col-sm col-form-label"
-                                >Office Phone
-                                    <sub>
-                                        <em>(include the country code)</em>
-                                    </sub>
-                                </label>
-                                <div class="col-sm">
-                                    <input
-                                            type="tel"
-                                            class="form-control"
-                                            id="officePhone-input"
-                                            name="officePhone-input"
-                                            aria-label="Office Phone"
-                                    />
-                                </div>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="officePhone">Office Phone <sub> <em>(include the country code)</em> </sub> </label>
+
+                                <div class="col-sm"><input aria-label="Office Phone" class="form-control" id="officePhone-input" name="officePhone-input" type="tel" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="mobilePhone" class="col-sm col-form-label"
-                                >Mobile Phone<sub>
-                                    <em>(include the country code)</em>
-                                </sub></label
-                                >
-                                <div class="col-sm">
-                                    <input
-                                            type="tel"
-                                            class="form-control"
-                                            id="mobilePhone-input"
-                                            name="mobilePhone-input"
-                                            aria-label="Mobile Phone"
-                                    />
-                                </div>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="mobilePhone">Mobile Phone<sub> <em>(include the country code)</em> </sub></label>
+
+                                <div class="col-sm"><input aria-label="Mobile Phone" class="form-control" id="mobilePhone-input" name="mobilePhone-input" type="tel" /></div>
                             </div>
-                            <div class="row mb-1">
-                                <label for="emailAddress" class="col-sm col-form-label"
-                                >
-                                    Email<sup class="required">*(required)</sup>
-                                    <address></address
-                                    >
-                                </label>
+
+                            <div class="row mb-1"><label class="col-sm col-form-label" for="emailAddress">Email<sup class="required">*(required)</sup> </label>
+
+                                <address></address>
+                                <label class="col-sm col-form-label" for="emailAddress"> </label>
+
                                 <div class="col-sm-6">
-                                    <div class="input-group mb-1">
-                                        <input
-                                                type="text"
-                                                class="form-control col-sm-1"
-                                                id="emailAddress-input"
-                                                name="emailAddress-input"
-                                                aria-label="Email Address"
-                                        />
-                                        <span class="input-group-text col-sm" id="basic-addon1"
-                                        >@naturalwayofliving.com</span
-                                        >
-                                    </div>
+                                    <div class="input-group mb-1"><input aria-label="Email Address" class="form-control col-sm-1" id="emailAddress-input" name="emailAddress-input" type="text" /> <span class="input-group-text col-sm" id="basic-addon1">@naturalwayofliving.com</span></div>
                                 </div>
                             </div>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button type="submit" class="btn btn-success" id="submit-btn" disabled>
-                                    Download email signature
-                                </button>
-                            </div>
+
+                            <div style="float:left" class="d-grid gap-2 d-md-flex justify-content-md-end"><button class="btn btn-success" disabled="disabled" id="submit-btn" type="submit">Download email signature</button></div>
                         </form>
                     </div>
                 </div>
             </div>
+
             <footer>
-               <span class="copyright"
-               >© 2022 - NWL Signature | Last update April 28, 2022</span
-               >
-                <div class="bestView">(Best view with Google Chrome Browser)</div>
+                <div style="float:left">
+                    <span style="font-size:11px;"><a href="https://github.com/daynis-olman/generate-png-jpeg-email-signature">Open Sourced under GNU General Public License v3.0</a> </br>Optimised for Google Chrome&nbsp;<span class="copyright">Last updated May 30, 2022</span></span></br></br>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/daynis-olman/generate-png-jpeg-email-signature" data-icon="octicon-star" data-show-count="true" aria-label="Star daynis-olman/generate-png-jpeg-email-signature on GitHub">Star</a>
+
+
+
+                </div>
+
+
             </footer>
         </div>
     </div>
-</body>
-<script>
-    $(document).ready(function(){
-        $('input[type="text"]').change(function(){
-            $("#submit-btn").prop( "disabled", true );
-            if($("#firstName-input").val().length > 0 && $("#jobTitle-input").val().length > 0) {
-                $('#submit-btn').removeAttr('disabled');
-            }
+    <script>
+        $(document).ready(function(){
+            $('input[type="text"]').change(function(){
+                $("#submit-btn").prop( "disabled", true );
+                if($("#firstName-input").val().length > 0 && $("#jobTitle-input").val().length > 0) {
+                    $('#submit-btn').removeAttr('disabled');
+                }
+            });
         });
-    });
-</script>
+    </script><script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ includedLanguages: 'en,id', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+    }
+
+    function triggerHtmlEvent(element, eventName) {
+        var event;
+        if (document.createEvent) {
+            event = document.createEvent('HTMLEvents');
+            event.initEvent(eventName, true, true);
+            element.dispatchEvent(event);
+        } else {
+            event = document.createEventObject();
+            event.eventType = eventName;
+            element.fireEvent('on' + event.eventType, event);
+        }
+    }
+    $(document).ready(function () {
+        $(document).on('click', '.languageOption', function () {
+            var value = $(this).attr("data-lang");
+
+            updateLanguage(value);
+
+        })
+
+        function updateLanguage(value) {
+            var selectIndex = 0;
+            var a = document.querySelector("#google_translate_element select");
+            switch (value) {
+                case "en":
+                    selectIndex = 0;
+                    break;
+                case "es":
+                    selectIndex = 3;
+                    break;
+                case "fr":
+                    selectIndex = 1;
+                    break;
+                case "pt":
+                    selectIndex = 2;
+                    break;
+
+            }
+            a.selectedIndex = selectIndex;
+            a.dispatchEvent(new Event('change'));
+        }
+    })
+</script></div>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 </html>
